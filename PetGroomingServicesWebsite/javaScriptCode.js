@@ -181,9 +181,23 @@ function labelChangeLarge() {
 
 //show error message if user clicked next and no radio button is selected 
 function errorMessage(){
- if(document.getElementById("grooming").checked==true){
-    if(document.getElementById("nextBtn").clicked==true){
-        alert("Please select a size first");
-}
+
+ if(document.getElementById("nextBtn").clicked==true){
+    if (document.getElementById("sizeSmall").checked == false){
+        alert("Select a size first");
+    }
  }
+ 
+ if(document.getElementById("nextBtn").clicked==true){
+    if (document.getElementById("sizeMedium").checked == false){
+        alert("Select a size first");
+    }
+ }
+
+ if(document.getElementById("nextBtn").clicked==true){
+    if (document.getElementById("sizeLarge").checked == false){
+        alert("Select a size first");
+    }
+ }
+
 }

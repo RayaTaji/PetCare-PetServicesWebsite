@@ -6,12 +6,12 @@
 
     <style>
         footer {
-            position: fixed;
+            position: relative;
             padding-top: 10px;
             bottom: 0;
             text-align: center;
-            width: 100%;
-            height: 40px;
+            max-width: 100%;
+            min-height: 40px;
         }
 
         @font-face {
@@ -34,14 +34,15 @@
             font-size: 30px;
 
         }
-
-        .container {
+        @media (min-width: 40em){
+            .container {
             margin: 0;
             display: flex;
             padding-top: 200;
             padding-left: 200px;
-
         }
+        }
+      
 
         .content {
             flex-grow: 1;
@@ -59,11 +60,11 @@
             font-size: 25px;
             font-style: italic;
             padding: 10px;
-            width: 250px;
+            min-width: 250px;
             border-radius: 20px;
             border-color: rgb(255, 194, 202, 255);
             background-color: rgb(255, 194, 202, 255);
-            opacity: 0.65;
+           
         }
 
         #nextBtn:hover {
@@ -84,14 +85,14 @@
 
 
         input[type="checkbox"] {
-            height: 20px;
-            width: 20px;
+            min-height: 20px;
+            max-width: 20px;
             cursor: pointer;
         }
 
         input[type="radio"] {
-            height: 20px;
-            width: 20px;
+            min-height: 20px;
+            max-width: 20px;
             cursor: pointer;
         }
     </style>
@@ -125,15 +126,15 @@
             <br>
             <div class="radioContainer">
                 <div class="group">
-                    <input type="radio" id="sizeSmall" name="sizes" value="Small" onchange="selectedSize()" onclick ="errorMessage();">
+                    <input type="radio" id="sizeSmall" name="sizes" value="Small" onchange="selectedSize()">
                     <label for="choice1">Small </label>
                     <br>
                     <br>
-                    <input type="radio" id="sizeMedium" name="sizes" value="Medium" onchange="selectedSize()"  onclick ="errorMessage();">
+                    <input type="radio" id="sizeMedium" name="sizes" value="Medium" onchange="selectedSize()">
                     <label for="choice2">Medium</label>
                     <br>
                     <br>
-                    <input type="radio" id="sizeLarge" name="sizes" value="Large" onchange="selectedSize();" onclick ="errorMessage();">
+                    <input type="radio" id="sizeLarge" name="sizes" value="Large" onchange="selectedSize()">
                     <label for="choice3">Large</label>
                 </div>
             </div>
@@ -144,26 +145,26 @@
             <br>
             <div class="checkBoxContainter">
                 <div class="group">
-                    <p><input type="checkbox" name="services" id="fullGroom" value="groom" onclick ="errorMessage();">
+                    <p><input type="checkbox" name="services" id="fullGroom" value="groom">
                         <label id="grooming">Grooming</label>
                         <br>
                         <br>
                     <div class="group"></div>
-                    <input type="checkbox" name="services" id="bathe" value="Bathing" onclick ="errorMessage();">
+                    <input type="checkbox" name="services" id="bathe" value="Bathing">
                     <label id="bathing">Bathing</label>
                     <br>
                     <br>
-                    <input type="checkbox" name="services" id="hairtrim" value="Trimming" onclick ="errorMessage();">
+                    <input type="checkbox" name="services" id="hairtrim" value="Trimming">
                     <label id="trimming">Basic Trimming</label>
                     <br>
                     <br>
-                    <input type="checkbox" name="services" id="haircut" value="Haircut" onclick ="errorMessage();">
+                    <input type="checkbox" name="services" id="haircut" value="Haircut">
                     <label id="styling">Hair Styling</label>
                     <br>
                     <br>
 
                     <div>
-                        <button id = "nextBtn">Next</button>
+                        <button id = "nextBtn" onclick ="errorMessage()">Next</button>
                     </div>
                 </div>
             </div>
