@@ -1,51 +1,58 @@
 <html>
+
 <head>
-    <link rel="stylesheet" href="NavigationBar.css"/>
-<title>Pick a date and time</title>
-<link rel="shortcut icon" type="image/x-icon" href="Images/favicon.ico" />
-<style>
-    footer{
+    <link rel="stylesheet" href="NavigationBar.css" />
+    <title>Pick a date and time</title>
+    <link rel="shortcut icon" type="image/x-icon" href="Images/favicon.ico" />
+    <style>
+        footer {
             position: relative;
             text-align: center;
             max-width: 100%;
-}
-.container{
-    font-size: 40px;
-    text-align: center;
-    
-    padding: 10%;
-}
-#datePicker{
-    font-size: 30px;
-    font-family: Quicksand;
-}
-#timePicker{
-    font-size: 30px;
-    font-family: Quicksand;
-}
-body{
-    font-family:Quicksand;
-}
-input[type="number"] {
-  width: 100px;
-}
+        }
 
-input + span {
-  padding-right: 30px;
-}
+        .container {
+            font-size: 40px;
+            text-align: center;
 
-input:invalid+span:after {
-  position: absolute;
-  content: '✖';
-  padding-left: 5px;
-}
+            padding: 10%;
+        }
 
-input:valid+span:after {
-  position: absolute;
-  content: '✓';
-  padding-left: 5px;
-}
-#Btn {
+        #datePicker {
+            font-size: 30px;
+            font-family: Quicksand;
+        }
+
+        #timePicker {
+            font-size: 30px;
+            font-family: Quicksand;
+        }
+
+        body {
+            font-family: Quicksand;
+        }
+
+        input[type="number"] {
+            width: 100px;
+        }
+
+        input+span {
+            padding-right: 30px;
+        }
+
+        input:invalid+span:after {
+            position: absolute;
+            content: '✖';
+            padding-left: 5px;
+        }
+
+        input:valid+span:after {
+            position: absolute;
+            content: '✓';
+            padding-left: 5px;
+        }
+
+        #Btn {
             font-size: 25px;
             font-style: italic;
             font-family: Quicksand;
@@ -55,17 +62,18 @@ input:valid+span:after {
             border-color: rgb(255, 194, 202, 255);
             background-color: rgb(255, 194, 202, 255);
 
-           
+
         }
 
         #Btn:hover {
             box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
             opacity: 1;
         }
-        a{
+
+        a {
             text-decoration: none;
         }
-</style>
+    </style>
 </head>
 
 <body>
@@ -83,44 +91,45 @@ input:valid+span:after {
             <li><a href="contactUs.html">Contact Us</a></li>
         </ul>
     </nav>
-<div class="container">
-    <div class="content">
-        <form>
-            <label>
-                Pick the day
-            </label>
-            <input type="date" id="datePicker"name="appointmentDate" min="2022-08-01" max="2022-12-31" step="1">
-            <br>
-            <br>
-            <label>Set the time</label>
-            
-                <input type="time" id="timePicker"name="appointmentDate" min="09:00" max="20:00" value="09:00">
+    <div class="container">
+        <div class="content">
+            <form>
+                <label>
+                    Pick the day
+                </label>
+                <input type="date" id="datePicker" name="appointmentDate" min="2022-08-01" max="2022-12-31" step="1">
+                <br>
+                <br>
+                <label>Set the time</label>
+
+                <input type="time" id="timePicker" name="appointmentDate" min="09:00" max="20:00" value="09:00">
                 <span class="validity"></span>
                 <br>
                 <label style="font-size: 20px;">*from 9:00AM to 8:00PM</label>
-        </form>
-        <br>
-        <div id="BTNcontainer"> 
-            <a href="dogBooking.html">
-                <button id="BTN">Back </button>
-            </a>
-    
-            <a href="#">
-                <button id="BTN">Submit</button>
-    
-            </a>
+            </form>
+            <br>
+            <div id="BTNcontainer">
+                <a href="dogBooking.html">
+                    <button id="BTN">Back </button>
+                </a>
+
+                <a href="#">
+                    <button id="BTN">Submit</button>
+
+                </a>
+
+            </div>
 
         </div>
-  
+
+
+
+
     </div>
- 
-   
-
-
-</div>
     <footer>
         <p>&copy; 2022 Raya Taji, DISCLAIMER: I do not own any of the pictures and icons used.</p>
     </footer>
 
 </body>
+
 </html>

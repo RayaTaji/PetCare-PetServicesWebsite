@@ -15,10 +15,6 @@
             min-height: 40px;
         }
 
-        @font-face {
-            src: url(Fonts/Quicksand-VariableFont_wght.ttf);
-            font-family: Quicksand;
-        }
 
         body {
             font-family: Quicksand;
@@ -35,15 +31,16 @@
             font-size: 30px;
 
         }
-        @media (min-width: 40em){
+
+        @media (min-width: 40em) {
             .container {
-            margin: 0;
-            display: flex;
-            padding: 100px;
-            column-gap: 50px;
+                margin: 0;
+                display: flex;
+                padding: 100px;
+                column-gap: 50px;
+            }
         }
-        }
-      
+
 
         .content {
             flex-grow: 1;
@@ -65,7 +62,7 @@
             border-radius: 20px;
             border-color: rgb(255, 194, 202, 255);
             background-color: rgb(255, 194, 202, 255);
-           
+
         }
 
         #nextBtn:hover {
@@ -166,9 +163,9 @@
 
                     <div>
                         <a href="dogCalender.html">
-                            <button id = "nextBtn" onclick ="errorMessage();">Next</button>
+                            <button id="nextBtn" onclick="errorMessage();">Next</button>
                         </a>
-                       
+
                     </div>
                 </div>
             </div>
