@@ -51,12 +51,15 @@ justify-content:center;
 align-items:center;
 text-align:center;
 background-color: #fff;
+box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
 }
+
 .left{
-height:100px;
-background: url("Images/Dog\ Cover\ Photo.jpg") no-repeat center;
-background-size:cover;
+height: 100%;
+background: url("Images/Dog\ Cover\ Photo\ ContactUs\ Form.jpg") no-repeat center;
+background-size: cover;
 }
+
 .right{
 padding:25px 40px;
 }
@@ -84,13 +87,49 @@ width: 100%;
 padding:0.5rem 1rem;
 outline:none;
 border: 2px solid rgba(0,0,0,0);
-background-color: rgba(174, 23, 23, 0);
+background-color: rgba(230, 230, 230, 0.6);
 font-size:1.1rem;
 margin-bottom:22px;
 transition: .3s;
 }
 
+.field:hover{
+background-color: rgba(0,0,0,0.1);
+}
 
+.field:focus{
+background-color:#fff;
+border: 2px solid rgba(30,85,250,0.47);
+}
+#area{
+    min-height: 150px;
+}
+.btn{
+width:100%;
+padding:0.5rem 1rem;
+font-size:1.1rem;
+cursor: pointer;
+outline:none;
+border:none;
+background-color: rgba(255, 194, 202, 255);
+transition: .3s;
+}
+
+.btn:hover{
+    background-color: rgba(250, 190, 200, 250);
+}
+
+@media screen and (max-width:880px){ /*in screen height less than 880, do this ->*/
+.contact-box{
+grid-template-columns:1fr;
+/*make it only one column*/
+}
+
+.left{
+height:200px;
+
+}
+}
 a{
     text-decoration: none;
 }
@@ -121,7 +160,8 @@ a{
                 <input type="text" class = "field" placeholder="Your Name">
                 <input type="email" class = "field" placeholder="Your E-mail">
                 <input type="number" class = "field" placeholder="Your Number">
-                <textarea class = "field" placeholder="Your Message"></textarea>
+                <textarea class = "field" id = "area" placeholder="Your Message"></textarea>
+                <button class = "btn">Send</button>
             </div>
         </div>
     </div>
