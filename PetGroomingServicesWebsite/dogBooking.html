@@ -35,17 +35,10 @@
         @media (min-width: 40em) {
             .container {
                 margin: 0;
-                display: flex;
                 padding: 100px;
                 column-gap: 50px;
+                text-align: center;
             }
-        }
-
-
-        .content {
-            flex-grow: 1;
-            border-left: 2px;
-
         }
 
         #fontsize {
@@ -72,27 +65,18 @@
 
 
         .radioContainer {
-            text-align: left;
+            text-align: center;
             padding-left: 30px;
         }
 
-        .checkBoxContainter {
-            text-align: left;
-            padding-left: 35px;
-        }
-
-
-        input[type="checkbox"] {
-            min-height: 20px;
-            max-width: 20px;
-            cursor: pointer;
-        }
+       
 
         input[type="radio"] {
             min-height: 20px;
             max-width: 20px;
             cursor: pointer;
         }
+
     </style>
     <script type="text/javascript" src="javaScriptCodeDog.js"></script>
 </head>
@@ -124,54 +108,29 @@
             <br>
             <div class="radioContainer">
                 <div class="group">
-                    <input type="radio" id="sizeSmall" name="sizes" value="Small" onchange="selectedSize()">
+                    <input type="radio" id="sizeSmall" name="sizes" value="Small">
                     <label for="choice1">Small </label>
                     <br>
                     <br>
-                    <input type="radio" id="sizeMedium" name="sizes" value="Medium" onchange="selectedSize()">
+                    <input type="radio" id="sizeMedium" name="sizes" value="Medium">
                     <label for="choice2">Medium</label>
                     <br>
                     <br>
-                    <input type="radio" id="sizeLarge" name="sizes" value="Large" onchange="selectedSize()">
+                    <input type="radio" id="sizeLarge" name="sizes" value="Large">
                     <label for="choice3">Large</label>
                 </div>
             </div>
         </div>
-        <div class="content">
-            <p class="header1">What services would you like? </p>
-            <p>Please check all the services you want</p>
-            <br>
-            <div class="checkBoxContainter">
-                <div class="group">
-                    <p><input type="checkbox" name="services" id="fullGroom" value="groom">
-                        <label id="grooming">Grooming</label>
-                        <br>
-                        <br>
-                    <div class="group"></div>
-                    <input type="checkbox" name="services" id="bathe" value="Bathing">
-                    <label id="bathing">Bathing</label>
-                    <br>
-                    <br>
-                    <input type="checkbox" name="services" id="hairtrim" value="Trimming">
-                    <label id="trimming">Basic Trimming</label>
-                    <br>
-                    <br>
-                    <input type="checkbox" name="services" id="haircut" value="Haircut">
-                    <label id="styling">Hair Styling</label>
-                    <br>
-                    <br>
+        <div>
+            <a href="dogCalender.html">
+                <button id="nextBtn" onclick="errorMessage();">Next</button>
+            </a>
 
-                    <div>
-                        <a href="dogCalender.html">
-                            <button id="nextBtn" onclick="errorMessage();">Next</button>
-                        </a>
-
-                    </div>
-                </div>
-            </div>
         </div>
+            </div>
+        
 
-    </div>
+    
 
     <footer>
         <footer>
