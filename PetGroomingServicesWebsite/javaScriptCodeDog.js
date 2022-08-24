@@ -2,6 +2,7 @@ var service1 = document.getElementById("fullgroom");
 var service2 = document.getElementById("bathe");
 var service3 = document.getElementById("hairtrim");
 var service4 = document.getElementById("haircut");
+
 function selectedSize() {
     if (document.getElementById("sizeSmall").checked == true) {
         labelChangeSmall();}
@@ -27,10 +28,10 @@ function labelChangeSmall() {
     var l4 = document.getElementById("styling");
     /////////////////////////////////////////
     //grooming price from medium to small and from large to small  
-    if (l1.innerHTML === "Grooming") {
+    
         l1.innerHTML = "Grooming: 6 JD"
-    }
-    else if (l1.innerHTML === "Grooming: 8 JD") {
+    
+    if (l1.innerHTML === "Grooming: 8 JD") {
         l1.innerHTML = "Grooming: 6 JD"
     }
     else if (l1.innerHTML === "Grooming: 10 JD") {
@@ -176,28 +177,5 @@ function labelChangeLarge() {
     else if (l4.innerHTML === "Hair Styling: 20 JD") {
         l4.innerHTML = "Hair Styling: 25 JD"
     }
-
-}
-
-//show error message if user clicked next and no radio button is selected 
-function errorMessage(){
-
- if(document.getElementById("nextBtn").clicked==true){
-    if (document.getElementById("sizeSmall").checked == false){
-        alert("Select a size first");
-    }
- }
- 
- if(document.getElementById("nextBtn").clicked==true){
-    if (document.getElementById("sizeMedium").checked == false){
-        alert("Select a size first");
-    }
- }
-
- if(document.getElementById("nextBtn").clicked==true){
-    if (document.getElementById("sizeLarge").checked == false){
-        alert("Select a size first");
-    }
- }
 
 }

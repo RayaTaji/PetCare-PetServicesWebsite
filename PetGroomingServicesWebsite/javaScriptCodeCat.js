@@ -1,7 +1,4 @@
-var service1 = document.getElementById("fullgroom");
-var service2 = document.getElementById("bathe");
-var service3 = document.getElementById("hairtrim");
-var service4 = document.getElementById("haircut");
+
 function selectedSize() {
     if (document.getElementById("sizeSmall").checked == true) {
         labelChangeSmall();}
@@ -176,28 +173,5 @@ function labelChangeLarge() {
     else if (l4.innerHTML === "Hair Styling: 9 JD") {
         l4.innerHTML = "Hair Styling: 11 JD"
     }
-
-}
-
-//show error message if user clicked next and no radio button is selected 
-function errorMessage(){
-
- if(document.getElementById("nextBtn").clicked==true){
-    if (document.getElementById("sizeSmall").checked == false){
-        alert("Select a size first");
-    }
- }
- 
- if(document.getElementById("nextBtn").clicked==true){
-    if (document.getElementById("sizeMedium").checked == false){
-        alert("Select a size first");
-    }
- }
-
- if(document.getElementById("nextBtn").clicked==true){
-    if (document.getElementById("sizeLarge").checked == false){
-        alert("Select a size first");
-    }
- }
 
 }
