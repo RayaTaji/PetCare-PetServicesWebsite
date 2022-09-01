@@ -69,19 +69,34 @@
             padding-left: 30px;
         }
 
-       
+
 
         input[type="radio"] {
             min-height: 20px;
             max-width: 20px;
             cursor: pointer;
         }
+
         a {
             text-decoration: none;
         }
-
     </style>
-    <script type="text/javascript" src="javaScriptCodeDog.js"></script>
+
+    <script>
+        
+        function enableBTN() {
+
+            if (document.getElementById("sizeSmall").checked == false && document.getElementById("sizeMedium").checked == false && document.getElementById("sizeLarge").checked == false) {
+                alert("Plese select a size first!");
+                location.replace("dogBooking.html");
+            }
+            else{
+                location.replace("dogServices.html");
+            }
+        }
+
+
+    </script>
 </head>
 
 <body>
@@ -113,15 +128,15 @@
             <br>
             <div class="radioContainer">
                 <div class="group">
-                    <input type="radio" id="sizeSmall" name="sizes" value="Small" onchange="selectedSize();">
+                    <input type="radio" id="sizeSmall" name="sizes" value="Small">
                     <label for="choice1">Small </label>
                     <br>
                     <br>
-                    <input type="radio" id="sizeMedium" name="sizes" value="Medium" onchange="selectedSize();">
+                    <input type="radio" id="sizeMedium" name="sizes" value="Medium">
                     <label for="choice2">Medium</label>
                     <br>
                     <br>
-                    <input type="radio" id="sizeLarge" name="sizes" value="Large" onchange="selectedSize();">
+                    <input type="radio" id="sizeLarge" name="sizes" value="Large">
                     <label for="choice3">Large</label>
                 </div>
             </div>
@@ -132,17 +147,18 @@
         <br>
         <br>
         <br>
+        <label id="warning"></label>
         <div id="BTNcontainer">
             <a href="apptBook.html">
-                <button id="BTN" onclick="selectedSize()">Back </button>
+                <button id="Btn">Back </button>
             </a>
 
-            <a href="dogServices.html">
-                <button id="BTN">Next </button>
-            </a>
+            
+                <button id="Btn" onclick="enableBTN()">Next </button>
+            
 
         </div>
-            </div>
+    </div>
 
     <footer>
         <footer>

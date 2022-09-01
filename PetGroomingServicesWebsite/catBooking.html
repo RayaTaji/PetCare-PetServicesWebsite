@@ -2,14 +2,12 @@
 
 <head>
     <link rel="stylesheet" href="NavigationBar.css" />
-    <title>Cat Appointment</title>
+    <title>Choose dog size</title>
     <link rel="shortcut icon" type="image/x-icon" href="Images/favicon.ico" />
 
     <style>
-        footer {
+         footer {
             position: relative;
-            padding-top: 10px;
-            bottom: 0;
             text-align: center;
             max-width: 100%;
             min-height: 40px;
@@ -35,17 +33,10 @@
         @media (min-width: 40em) {
             .container {
                 margin: 0;
-                display: flex;
                 padding: 100px;
                 column-gap: 50px;
+                text-align: center;
             }
-        }
-
-
-        .content {
-            flex-grow: 1;
-            border-left: 2px;
-
         }
 
         #fontsize {
@@ -54,51 +45,43 @@
             padding-left: 30px;
         }
 
-        #nextBtn {
+        #Btn {
             font-size: 25px;
             font-style: italic;
+            font-family: Quicksand;
             padding: 10px;
             min-width: 250px;
             border-radius: 20px;
             border-color: rgb(255, 194, 202, 255);
             background-color: rgb(255, 194, 202, 255);
 
+
         }
 
-        #nextBtn:hover {
+        #Btn:hover {
             box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
             opacity: 1;
         }
 
 
         .radioContainer {
-            text-align: left;
+            text-align: center;
             padding-left: 30px;
         }
 
-        .checkBoxContainter {
-            text-align: left;
-            padding-left: 35px;
-        }
-
-        #catImage {
-            width: 50px;
-            height: 50px;
-        }
-
-        input[type="checkbox"] {
-            min-height: 20px;
-            max-width: 20px;
-            cursor: pointer;
-        }
+       
 
         input[type="radio"] {
             min-height: 20px;
             max-width: 20px;
             cursor: pointer;
         }
+        a {
+            text-decoration: none;
+        }
+
     </style>
-    <script type="text/javascript" src="javaScriptCodeCat.js"></script>
+    <script type="text/javascript" src="javaScriptCodeDog.js"></script>
 </head>
 
 <body>
@@ -110,9 +93,9 @@
             <ul>
                 <li><a href="Home.html">Services</a>
                     <ul>
-                        <li><a href="/Home.html">Grooming</a>
+                        <li><a href="#grooming">Grooming</a>
                         <li><a href="#bathing">Bathing</a>
-                        <li><a href="Home">Haircut</a>
+                        <li><a href="#haircut">Haircut</a>
                     </ul>
                 </li>
                 <li><a href="apptBook.html">Book an Appointment</a></li>
@@ -124,59 +107,42 @@
     <div class="container">
         <div class="content">
             <p class="header1">What's your cat's size?</p>
-            <p>*Prices may vary depending on your cat's size* </p>
+            <br>
+            <p>*Prices may vary depending on your cat's size*</p>
+
             <br>
             <div class="radioContainer">
                 <div class="group">
-                    <input type="radio" id="sizeSmall" name="sizes" value="Small" onchange="selectedSize()">
+                    <input type="radio" id="sizeSmall" name="sizes" value="Small" onchange="selectedSize();">
                     <label for="choice1">Small </label>
                     <br>
                     <br>
-                    <input type="radio" id="sizeMedium" name="sizes" value="Medium" onchange="selectedSize()">
+                    <input type="radio" id="sizeMedium" name="sizes" value="Medium" onchange="selectedSize();">
                     <label for="choice2">Medium</label>
                     <br>
                     <br>
-                    <input type="radio" id="sizeLarge" name="sizes" value="Large" onchange="selectedSize()">
+                    <input type="radio" id="sizeLarge" name="sizes" value="Large" onchange="selectedSize();">
                     <label for="choice3">Large</label>
                 </div>
-
-            </div>
-
-        </div>
-        <div class="content">
-            <p class="header1">What services would you like? </p>
-            <p>Please check all the services you want</p>
-            <br>
-            <div class="checkBoxContainter">
-                <div class="group">
-                    <p><input type="checkbox" name="services" id="fullGroom" value="groom">
-                        <label id="grooming">Grooming</label>
-                        <br>
-                        <br>
-                    <div class="group"></div>
-                    <input type="checkbox" name="services" id="bathe" value="Bathing">
-                    <label id="bathing">Bathing</label>
-                    <br>
-                    <br>
-                    <input type="checkbox" name="services" id="hairtrim" value="Trimming">
-                    <label id="trimming">Basic Trimming</label>
-                    <br>
-                    <br>
-                    <input type="checkbox" name="services" id="haircut" value="Haircut">
-                    <label id="styling">Hair Styling</label>
-                    <br>
-                    <br>
-                    <div>
-                        <a href="catCalender.html">
-                            <button id="nextBtn">Next</button>
-                        </a>
-
-                    </div>
-                </div>
             </div>
         </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div id="BTNcontainer">
+            <a href="apptBook.html">
+                <button id="BTN" onclick="selectedSize()">Back </button>
+            </a>
 
-    </div>
+            <a href="dogServices.html">
+                <button id="BTN">Next </button>
+            </a>
+
+        </div>
+            </div>
 
     <footer>
         <footer>
