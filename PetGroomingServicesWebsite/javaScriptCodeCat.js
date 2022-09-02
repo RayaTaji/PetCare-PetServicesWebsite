@@ -187,6 +187,7 @@ function enableBTN() {
         
         alert("Please select a size first!");
               return false;
+              
     }
     else if (document.getElementById("fullGroom").checked == false && document.getElementById("bathe").checked == false && document.getElementById("hairtrim").checked == false && document.getElementById("haircut").checked == false) {
         alert("Select at least one service, please!");
@@ -200,4 +201,3 @@ function enableBTN() {
 
 
 }
-
