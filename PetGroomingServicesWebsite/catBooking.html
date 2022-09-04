@@ -2,7 +2,7 @@
 
 <head>
     <link rel="stylesheet" href="NavigationBar.css" />
-    <title>Choose dog size</title>
+    <title>Choose cat size</title>
     <link rel="shortcut icon" type="image/x-icon" href="Images/favicon.ico" />
 
     <style>
@@ -23,7 +23,8 @@
             font-size: 50px;
             text-align: left;
         }
-        .pLeft{
+
+        .pLeft {
             text-align: left;
         }
 
@@ -31,11 +32,6 @@
             font-size: 30px;
         }
 
-        .container {
-            margin: 0;
-            display: flex;
-            padding: 200 0 0 0;
-        }
 
         .content {
             flex-grow: 1;
@@ -45,7 +41,9 @@
         @media (min-width: 40em) {
             .container {
                 margin: 0;
-                padding: 200 200 0 200;
+                display: flex;
+                justify-content: center;
+                padding: 10%;
                 column-gap: 50px;
                 text-align: center;
                 margin: 0;
@@ -57,9 +55,11 @@
             font-style: italic;
             padding-left: 30px;
         }
-        .BTNcontainer{
+
+        .BTNcontainer {
             padding: 200 200 0 200;
         }
+
         #Btn {
             font-size: 25px;
             font-style: italic;
@@ -98,7 +98,7 @@
             width: 20px;
             cursor: pointer;
         }
-        
+
         a {
             text-decoration: none;
         }
@@ -178,18 +178,15 @@
                             <button id="Btn">Back </button>
                         </a>
                         <button id="Btn" onclick="enableBTN()">Next </button>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
+                    
                     </div>
                 </div>
             </div>
 
         </div>
-        
+
     </div>
-   
+
     <footer>
         <footer>
             <p>&copy; 2022 Raya Taji, DISCLAIMER: I do not own any of the pictures and icons used.</p>

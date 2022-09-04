@@ -15,7 +15,8 @@
         .container {
             font-size: 40px;
             text-align: center;
-
+            display: flex;
+            justify-content: center;
             padding: 10%;
         }
         
@@ -23,14 +24,18 @@
             font-size: 50px;
 
         }
+        .l1{
+            font-size: 25px;
+
+        }
 
         #datePicker {
-            font-size: 30px;
+            font-size: 25px;
             font-family: Quicksand;
         }
 
         #timePicker {
-            font-size: 30px;
+            font-size: 25px;
             font-family: Quicksand;
         }
 
@@ -45,6 +50,7 @@
         input+span {
             padding-right: 30px;
         }
+      
 
         input:invalid+span:after {
             position: absolute;
@@ -101,22 +107,22 @@
             <br>
         
             <form>
-                <label>
+                <label class="l1">
                     Pick the day
                 </label>
                 <input type="date" id="datePicker" name="appointmentDate" min="2022-08-01" max="2022-12-31" step="1">
                 <br>
                 <br>
-                <label>Set the time</label>
+                <label class="l1">Set the time</label>
 
                 <input type="time" id="timePicker" name="appointmentDate" min="09:00" max="20:00" value="09:00">
                 <span class="validity"></span>
                 <br>
-                <label style="font-size: 20px;">*from 9:00AM to 8:00PM</label>
+                <label class="l1">*from 9:00AM to 8:00PM</label>
             </form>
             <br>
             <br>
-            <br>
+        
             <div id="BTNcontainer">
                 <a href="catBooking.html">
                     <button id="BTN">Back </button>
